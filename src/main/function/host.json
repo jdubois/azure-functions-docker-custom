@@ -1,8 +1,22 @@
 {
     "version": "2.0",
-    "httpWorker": {
+    "logging": {
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": true,
+                "excludedTypes": "Request"
+            }
+        }
+    },
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle",
+        "version": "[1.*, 2.0.0)"
+    },
+    "customHandler": {
         "description": {
-            "defaultExecutablePath": "/home/site/wwwroot/spring-native-image"
+            "defaultExecutablePath": "/home/site/wwwroot/spring-native-image",
+            "workingDirectory": "",
+            "arguments": []
         }
     }
 }
